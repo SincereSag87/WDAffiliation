@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Wannaamker Digital Affiliation</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header></header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/Logo_transparent.png" alt="Company Logo" width="50" height="40">
+                WDA
+            </div>
+            <button id="menu-toggle">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="svg-background svg-background-left">
+                    <!-- SVG circuit design -->
+                    <svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="circuit-svg">
+                        <g class="rotate">
+                            <!-- Concentric Circles -->
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="8 4"/>
+                            <circle cx="200" cy="200" r="120" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="6 3"/>
+                            
+                            <!-- Radial Paths -->
+                            <path d="M 200,50 A 150,150 0 0 1 350,200" fill="none" stroke="#ffffff" stroke-width="2"/>
+                            <path d="M 50,200 A 150,150 0 0 1 200,350" fill="none" stroke="#ffffff" stroke-width="2"/>
+                        </g>
+                        
+                        <!-- Center Circle -->
+                        <circle cx="200" cy="200" r="100" fill="#ffffff" />
+                        
+                        <!-- Pulsating Circles -->
+                        <circle class="pulse" cx="50" cy="150" r="8" fill="#ffffff"/>
+                        <circle class="pulse" cx="350" cy="250" r="12" fill="#ffffff"/>
+                        <circle class="pulse" cx="200" cy="40" r="10" fill="#ffffff"/>
+                        
+                        <!-- Small Accent Dots -->
+                        <g fill="#cccccc">
+                            <circle cx="100" cy="100" r="3"/>
+                            <circle cx="300" cy="300" r="3"/>
+                            <circle cx="150" cy="350" r="3"/>
+                            <circle cx="250" cy="50" r="3"/>
+                        </g>
+                        
+                        <!-- Triangle Shapes -->
+                        <polygon points="320,180 330,190 320,200" fill="#ffffff"/>
+                        <polygon points="80,220 70,230 80,240" fill="#ffffff"/>
+                        
+                        <!-- Extra Small Dots -->
+                        <g fill="#bbbbbb">
+                            <circle cx="50" cy="50" r="2"/>
+                            <circle cx="60" cy="50" r="2"/>
+                            <circle cx="70" cy="50" r="2"/>
+                            <circle cx="350" cy="350" r="2"/>
+                            <circle cx="340" cy="350" r="2"/>
+                            <circle cx="330" cy="350" r="2"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="svg-background svg-background-right">
+                    <!-- SVG code for right-side design (duplicate of left-side) -->
+                    <svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <g class="rotate">
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="8 4"/>
+                            <circle cx="200" cy="200" r="120" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="6 3"/>
+                            <path d="M 200,50 A 150,150 0 0 1 350,200" fill="none" stroke="#666" stroke-width="2"/>
+                            <path d="M 50,200 A 150,150 0 0 1 200,350" fill="none" stroke="#666" stroke-width="2"/>
+                        </g>
+                        <circle cx="200" cy="200" r="100" fill="#ffffff" />
+                        <circle class="pulse" cx="50" cy="150" r="8" fill="#666"/>
+                        <circle class="pulse" cx="350" cy="250" r="12" fill="#666"/>
+                        <circle class="pulse" cx="200" cy="40" r="10" fill="#666"/>
+                        <g fill="#999">
+                            <circle cx="100" cy="100" r="3"/>
+                            <circle cx="300" cy="300" r="3"/>
+                            <circle cx="150" cy="350" r="3"/>
+                            <circle cx="250" cy="50" r="3"/>
+                        </g>
+                        <polygon points="320,180 330,190 320,200" fill="#666"/>
+                        <polygon points="80,220 70,230 80,240" fill="#666"/>
+                        <g fill="#ccc">
+                            <circle cx="50" cy="50" r="2"/>
+                            <circle cx="60" cy="50" r="2"/>
+                            <circle cx="70" cy="50" r="2"/>
+                            <circle cx="350" cy="350" r="2"/>
+                            <circle cx="340" cy="350" r="2"/>
+                            <circle cx="330" cy="350" r="2"/>
+                        </g>
+                    </svg>
+                </div>
+                <h1>My Portfolio</h1>
+                <p>Showcasing my best work and innovative solutions</p>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="saas">SaaS</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="design">Custom Design</button>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="saas">
+                        <img src="images/TaskMaster_Dashboard.png" alt="SaaS Project 1">
+                        <div class="portfolio-item-content">
+                            <h2>Task Manager SaaS Project</h2>
+                            <p>A task management dashboard showing key metrics and recent tasks for "TaskMaster" SaaS.</p>
+                            <a href="https://loquacious-kringle-91b77b.netlify.app/">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="web">
+                        <img src="images/Welcome_to_Modern Shop.png" alt="Web Project 1">
+                        <div class="portfolio-item-content">
+                            <h2>E-commerce Platform</h2>
+                            <p>A fully responsive online store with advanced features.</p>
+                            <a href="https://magical-elf-960755.netlify.app/">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="design">
+                        <img src="images/Brand_Identity.png" alt="Design Project 1">
+                        <div class="portfolio-item-content">
+                            <h2>Brand Identity</h2>
+                            <p>A mockup showing vibrant colors, clear typography, and interactive UI components for consistent branding and usability.</p>
+                            <a href="https://polite-praline-9b77ee.netlify.app/">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="saas">
+                        <img src="images/Analytics_Dashboard.png" alt="SaaS Project 2">
+                        <div class="portfolio-item-content">
+                            <h2>Analytics Dashboard</h2>
+                            <p>Real-time data visualization tool for businesses.</p>
+                            <a href="https://bright-hotteok-a629c6.netlify.app/">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="web">
+                        <img src="images/SocialMedia_Platform.png" alt="Web Project 2">
+                        <div class="portfolio-item-content">
+                            <h2>Social Media Platform</h2>
+                            <p>A niche social network for creative professionals.</p>
+                            <a href="https://delightful-gaufre-336f19.netlify.app/">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="design">
+                        <img src="images/CartoonHub.png" alt="Design Project 2">
+                        <div class="portfolio-item-content">
+                            <h2>UI/UX Redesign</h2>
+                            <p>A vibrant CartoonHub page featuring popular characters, a spotlight on "Adventure Time," and clear action buttons to engage users.</p>
+                            <a href="https://dulcet-praline-a1c4ce.netlify.app/">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Wannamaker Digital Affiliation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Intersection Observer for animating elements on scroll
+        const animateOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(animateOnScroll, {
+            root: null,
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.portfolio-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

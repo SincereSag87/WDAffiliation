@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wannamaker Digital Affiliation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/Logo_transparent.png" alt="Company Logo" width="50" height="40">
+                WDA
+            </div>
+            <button id="menu-toggle">☰</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1 class="pixel-title">Wannamaker Digital Affiliation</h1>
+                <p>Affiliating Success with Innovation</p>
+                <a href="contact.html" class="btn">Get Started</a>
+                <div id="svg-container"></div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>My Services</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>SaaS Solutions</h3>
+                        <p>Custom software as a service solutions tailored to your business needs.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Web Development</h3>
+                        <p>Responsive and performant web applications built with cutting-edge technologies.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Custom Design</h3>
+                        <p>Unique and engaging designs that capture your brand's essence and captivate your audience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2>My Portfolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="images/Welcome_to_Modern Shop.png" alt="Project 1">
+                        <div class="portfolio-item-content">
+                            <h3>Welcome to Morden Shop</h3>
+                            <p>"Modern Shop" is a sleek platform offering premium products, fast delivery, secure transactions, and a seamless shopping experience.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/TaskMaster_Dashboard.png" alt="Project 2">
+                        <div class="portfolio-item-content">
+                            <h3>Task Master Dashboard</h3>
+                            <p>TaskMaster Dashboard is a team productivity tool for tracking tasks, creating priorities, and promoting accountability with an intuitive design.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/SocialMedia_Platform.png" alt="Project 3">
+                        <div class="portfolio-item-content">
+                            <h3>create.io - Discover Createive Work</h3>
+                            <p>Create.io is a platform for sharing and discovering creative work, fostering collaboration, networking, and growth across categories like design and photography.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Wannamaker Digital Affiliation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animated SVG
+        const svgContainer = document.getElementById('svg-container');
+        const svgContent = `
+            <svg viewBox="0 0 400 400" width="100%" height="100%" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g class="rotate">
+                    <circle cx="200" cy="200" r="150" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="8 4"/>
+                    <circle cx="200" cy="200" r="120" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="6 3"/>
+                    <path d="M 200,50 A 150,150 0 0 1 350,200" fill="none" stroke="#666" stroke-width="2"/>
+                    <path d="M 50,200 A 150,150 0 0 1 200,350" fill="none" stroke="#666" stroke-width="2"/>
+                </g>
+                <circle cx="200" cy="200" r="100" fill="#3b82f6" />
+                <image x="42" y="42" height="315" width="315" href="images/Logo_transparent.png" />
+                <circle class="pulse" cx="50" cy="150" r="8" fill="#666"/>
+                <circle class="pulse" cx="350" cy="250" r="12" fill="#666"/>
+                <circle class="pulse" cx="200" cy="40" r="10" fill="#666"/>
+                <g fill="#999">
+                    <circle cx="100" cy="100" r="3"/>
+                    <circle cx="300" cy="300" r="3"/>
+                    <circle cx="150" cy="350" r="3"/>
+                    <circle cx="250" cy="50" r="3"/>
+                </g>
+                <polygon points="320,180 330,190 320,200" fill="#666"/>
+                <polygon points="80,220 70,230 80,240" fill="#666"/>
+                <g fill="#ccc">
+                    <circle cx="50" cy="50" r="2"/>
+                    <circle cx="60" cy="50" r="2"/>
+                    <circle cx="70" cy="50" r="2"/>
+                    <circle cx="350" cy="350" r="2"/>
+                    <circle cx="340" cy="350" r="2"/>
+                    <circle cx="330" cy="350" r="2"/>
+                </g>
+            </svg>
+        `;
+        svgContainer.innerHTML = svgContent;
+
+        // Intersection Observer for animating elements on scroll
+        const animateOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(animateOnScroll, {
+            root: null,
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.service-card, .portfolio-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+
+        // Form submission animation
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                submitButton.textContent = 'Message Sent!';
+                submitButton.style.backgroundColor = '#4CAF50';
+                contactForm.reset();
+                setTimeout(() => {
+                    submitButton.textContent = 'Send Message';
+                    submitButton.style.backgroundColor = '';
+                    submitButton.disabled = false;
+                }, 3000);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

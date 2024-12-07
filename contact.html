@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Wannamaker Digital Affiliation</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/742e2d1662.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "7kS3J_Osf4blZzJyl",
+        });
+    })();
+    </script>
+</head>
+<body>
+    <header></header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/Logo_transparent.png" alt="Company Logo" width="50" height="40">
+                WDA
+            </div>
+            <button id="menu-toggle">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="svg-background svg-background-left">
+                    <!-- SVG circuit design -->
+                    <svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="circuit-svg">
+                        <g class="rotate">
+                            <!-- Concentric Circles -->
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="8 4"/>
+                            <circle cx="200" cy="200" r="120" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="6 3"/>
+                            
+                            <!-- Radial Paths -->
+                            <path d="M 200,50 A 150,150 0 0 1 350,200" fill="none" stroke="#ffffff" stroke-width="2"/>
+                            <path d="M 50,200 A 150,150 0 0 1 200,350" fill="none" stroke="#ffffff" stroke-width="2"/>
+                        </g>
+                        
+                        <!-- Center Circle -->
+                        <circle cx="200" cy="200" r="100" fill="#ffffff" />
+                        
+                        <!-- Pulsating Circles -->
+                        <circle class="pulse" cx="50" cy="150" r="8" fill="#ffffff"/>
+                        <circle class="pulse" cx="350" cy="250" r="12" fill="#ffffff"/>
+                        <circle class="pulse" cx="200" cy="40" r="10" fill="#ffffff"/>
+                        
+                        <!-- Small Accent Dots -->
+                        <g fill="#cccccc">
+                            <circle cx="100" cy="100" r="3"/>
+                            <circle cx="300" cy="300" r="3"/>
+                            <circle cx="150" cy="350" r="3"/>
+                            <circle cx="250" cy="50" r="3"/>
+                        </g>
+                        
+                        <!-- Triangle Shapes -->
+                        <polygon points="320,180 330,190 320,200" fill="#ffffff"/>
+                        <polygon points="80,220 70,230 80,240" fill="#ffffff"/>
+                        
+                        <!-- Extra Small Dots -->
+                        <g fill="#bbbbbb">
+                            <circle cx="50" cy="50" r="2"/>
+                            <circle cx="60" cy="50" r="2"/>
+                            <circle cx="70" cy="50" r="2"/>
+                            <circle cx="350" cy="350" r="2"/>
+                            <circle cx="340" cy="350" r="2"/>
+                            <circle cx="330" cy="350" r="2"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="svg-background svg-background-right">
+                    <!-- SVG code for right-side design (duplicate of left-side) -->
+                    <svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <g class="rotate">
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="8 4"/>
+                            <circle cx="200" cy="200" r="120" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="6 3"/>
+                            <path d="M 200,50 A 150,150 0 0 1 350,200" fill="none" stroke="#666" stroke-width="2"/>
+                            <path d="M 50,200 A 150,150 0 0 1 200,350" fill="none" stroke="#666" stroke-width="2"/>
+                        </g>
+                        <circle cx="200" cy="200" r="100" fill="#ffffff" />
+                        <circle class="pulse" cx="50" cy="150" r="8" fill="#666"/>
+                        <circle class="pulse" cx="350" cy="250" r="12" fill="#666"/>
+                        <circle class="pulse" cx="200" cy="40" r="10" fill="#666"/>
+                        <g fill="#999">
+                            <circle cx="100" cy="100" r="3"/>
+                            <circle cx="300" cy="300" r="3"/>
+                            <circle cx="150" cy="350" r="3"/>
+                            <circle cx="250" cy="50" r="3"/>
+                        </g>
+                        <polygon points="320,180 330,190 320,200" fill="#666"/>
+                        <polygon points="80,220 70,230 80,240" fill="#666"/>
+                        <g fill="#ccc">
+                            <circle cx="50" cy="50" r="2"/>
+                            <circle cx="60" cy="50" r="2"/>
+                            <circle cx="70" cy="50" r="2"/>
+                            <circle cx="350" cy="350" r="2"/>
+                            <circle cx="340" cy="350" r="2"/>
+                            <circle cx="330" cy="350" r="2"/>
+                        </g>
+                    </svg>
+                </div>
+                <h1>Contact Me</h1>
+                <p>Get in touch with me for your digital needs</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section container">
+            <div class="contact-form">
+                <h2>Send me a message</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="send-button" onclick="sendMail()">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Feel free to reach out to me through any of the following channels:</p>
+                <p>Email: wannamaker.affiliated@gmail.com</p>
+                <p>Address: Fairview Park, OH 44126</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/raymondwannamakerjr/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/WDAffiliation" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://github.com/SincereSag87" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <img src="images/Raymond2.jpg" alt="Profile Picture" class="profile-picture">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Wannamaker Digital Affiliation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        const sendButton = document.getElementById('send-button');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            sendMail(); // Call the sendMail function
+        });
+
+        function sendMail() {
+            let params = {
+                from_name: document.getElementById("name").value,
+                email_id: document.getElementById("email").value,
+                message: document.getElementById("message").value,
+            };
+
+            // Disable the button and change its text
+            sendButton.disabled = true;
+            sendButton.textContent = 'Sending...';
+
+            emailjs.send("service_l4c67lh", "template_1yixkus", params)
+                .then(() => {
+                    alert('Email Sent!');
+                    contactForm.reset();
+                    sendButton.textContent = 'Send Message'; // Reset button text
+                }, (error) => {
+                    alert('Oops! Something went wrong. Please try again later.');
+                    console.error('EmailJS Error:', error);
+                    sendButton.disabled = false; // Re-enable button on error
+                    sendButton.textContent = 'Send Message'; // Reset button text
+                });
+        }
+
+        // Intersection Observer for animating elements on scroll
+        const animateOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(animateOnScroll, {
+            root: null,
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.contact-form, .contact-info').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
